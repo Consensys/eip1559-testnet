@@ -1,5 +1,5 @@
 [Unit]
-Description=NATS server
+Description=Chain filler
 After=network.target
 [Service]
 ExecStart=/bin/sh -c "/home/ec2-user/chainfiller.sh > /home/ec2-user/chainfiller.log &"
