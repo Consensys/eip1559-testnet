@@ -1,0 +1,8 @@
+[Unit]
+Description=NATS server
+After=network.target
+[Service]
+ExecStart=/bin/sh -c "nats-server &"
+Type=forking
+[Install]
+WantedBy=default.target
