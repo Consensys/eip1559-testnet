@@ -1,6 +1,6 @@
 /home/ec2-user/eip1559-tx-sender/build/install/chain-filler/bin/chain-filler \
---rpc-endpoints=http://13.236.147.35:8545,http://52.47.153.114:8545,http://15.188.238.162:8545,http://18.222.108.145:8545 \
---num-transactions=10 \
+--rpc-endpoints=http://18.222.108.145:8545 \
+--num-transactions=5 \
 --num-contracts=0 \
 --eip-1559-tx-weight=0.5 \
 --num-threads=8 \

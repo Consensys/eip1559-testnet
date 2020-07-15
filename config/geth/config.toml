@@ -1,0 +1,85 @@
+# https://geth.ethereum.org/docs/interface/private-network/
+
+[Eth]
+NetworkId = 1559
+SyncMode = "fast"
+DiscoveryURLs = ["enrtree://AKA3AM6LPBYEUDMVNU3BSVQJ5AD45Y7YPOHJLEF6W26QOE4VTUDPE@all.mainnet.ethdisco.net"]
+NoPruning = false
+NoPrefetch = false
+LightPeers = 100
+UltraLightFraction = 75
+DatabaseCache = 512
+DatabaseFreezer = ""
+TrieCleanCache = 256
+TrieDirtyCache = 256
+TrieTimeout = 3600000000000
+EnablePreimageRecording = false
+EWASMInterpreter = ""
+EVMInterpreter = ""
+
+[Eth.Miner]
+GasFloor = 8000000
+GasCeil = 8000000
+GasPrice = 1000000000
+Recommit = 3000000000
+Noverify = false
+
+[Eth.Ethash]
+CacheDir = "ethash"
+CachesInMem = 2
+CachesOnDisk = 3
+CachesLockMmap = false
+DatasetDir = "/data"
+DatasetsInMem = 1
+DatasetsOnDisk = 2
+DatasetsLockMmap = false
+PowMode = 0
+
+[Eth.TxPool]
+Locals = []
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Eth.GPO]
+Blocks = 20
+Percentile = 60
+
+[Shh]
+MaxMessageSize = 1048576
+MinimumAcceptedPOW = 2e-01
+RestrictConnectionBetweenLightClients = true
+
+[Node]
+DataDir = "/data"
+IPCPath = "geth.ipc"
+NoUSB = true
+HTTPPort = 30303
+HTTPVirtualHosts = ["*"]
+HTTPModules = ["DEBUG","NET","WEB3","ETH","ADMIN","TRACE","MINER","PLUGINS","TXPOOL","CLIQUE"]
+WSPort = 8546
+WSModules = ["DEBUG","NET","WEB3","ETH","ADMIN","TRACE","MINER","PLUGINS","TXPOOL","CLIQUE"]
+GraphQLPort = 8547
+GraphQLVirtualHosts = ["*"]
+
+[Node.P2P]
+MaxPeers = 50
+NoDiscovery = false
+BootstrapNodes = ["enode://61ef9fdf10737ff6ff9bd18cef45111025e8b9d44a7d495ec58cc1abd7c5b8e42aad65cbfe703ed5470934942eae77740d166bf6113887d96080fa8f3640eade@18.217.131.220:30303,enode://7e35c11a1f6d9ab10b645ba26d76eb3d852e3d090af96147a6652e2a5fb58806fa2e445219980f8d55962c80a2dcc7f55bea33d007980abcf4a1a89c23871a0d@3.16.68.44:30303"]
+StaticNodes = []
+TrustedNodes = []
+ListenAddr = ":30303"
+EnableMsgEvents = false
+#NAT = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 3, 106, 125, 205]
+
+[Node.HTTPTimeouts]
+ReadTimeout = 30000000000
+WriteTimeout = 30000000000
+IdleTimeout = 120000000000
