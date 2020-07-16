@@ -1,8 +1,8 @@
 # https://geth.ethereum.org/docs/interface/private-network/
 [Eth]
 NetworkId = 1559
-SyncMode = "fast"
-DiscoveryURLs = ["enrtree://AKA3AM6LPBYEUDMVNU3BSVQJ5AD45Y7YPOHJLEF6W26QOE4VTUDPE@all.mainnet.ethdisco.net"]
+SyncMode = "full"
+#DiscoveryURLs = ["enrtree://AKA3AM6LPBYEUDMVNU3BSVQJ5AD45Y7YPOHJLEF6W26QOE4VTUDPE@all.mainnet.ethdisco.net"]
 NoPruning = false
 NoPrefetch = false
 LightPeers = 100
