@@ -1,5 +1,4 @@
 # https://geth.ethereum.org/docs/interface/private-network/
-
 [Eth]
 NetworkId = 1559
 SyncMode = "fast"
@@ -61,7 +60,8 @@ RestrictConnectionBetweenLightClients = true
 DataDir = "/data"
 IPCPath = "geth.ipc"
 NoUSB = true
-HTTPPort = 30303
+HTTPHost = "3.106.125.205"
+HTTPPort = 8545
 HTTPVirtualHosts = ["*"]
 HTTPModules = ["DEBUG","NET","WEB3","ETH","ADMIN","TRACE","MINER","PLUGINS","TXPOOL","CLIQUE"]
 WSPort = 8546
@@ -72,8 +72,8 @@ GraphQLVirtualHosts = ["*"]
 [Node.P2P]
 MaxPeers = 50
 NoDiscovery = false
-BootstrapNodes = ["enode://61ef9fdf10737ff6ff9bd18cef45111025e8b9d44a7d495ec58cc1abd7c5b8e42aad65cbfe703ed5470934942eae77740d166bf6113887d96080fa8f3640eade@18.217.131.220:30303,enode://7e35c11a1f6d9ab10b645ba26d76eb3d852e3d090af96147a6652e2a5fb58806fa2e445219980f8d55962c80a2dcc7f55bea33d007980abcf4a1a89c23871a0d@3.16.68.44:30303"]
-StaticNodes = []
+#BootstrapNodes = ["enode://61ef9fdf10737ff6ff9bd18cef45111025e8b9d44a7d495ec58cc1abd7c5b8e42aad65cbfe703ed5470934942eae77740d166bf6113887d96080fa8f3640eade@18.217.131.220:30303,enode://7e35c11a1f6d9ab10b645ba26d76eb3d852e3d090af96147a6652e2a5fb58806fa2e445219980f8d55962c80a2dcc7f55bea33d007980abcf4a1a89c23871a0d@3.16.68.44:30303"]
+StaticNodes = ["enode://0c72e2b7873e4342d725b5990c17adb2b159aad2ff5853de7e4910b25522a1f9e78f9cd802a8a3225b8fae4e994e522b50d6bd5a163eb3a7b49a0a73ca9a1c7e@13.236.147.35:30303","enode://1c6d296749018e4e4a78baf9a8a3048aae2557c3f2f11a340570d57e71071e2e9816a5f5d9215a333d12b432a81ff5017520b09461c4a102e72c7a1a2d9d7d0f@18.222.108.145:30303","enode://3eca270e124b5e24e846bb39d0a911d152cfd2671be079478e72e768363c959852301b40b2afffddbe45a285fd752fa4541e8376f73dad688757e0a07a35e164@15.188.238.162:30303"]
 TrustedNodes = []
 ListenAddr = ":30303"
 EnableMsgEvents = false
